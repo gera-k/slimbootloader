@@ -35,6 +35,8 @@ class Board(BaseBoard):
         self.BOARD_PKG_NAME       = 'ElkhartlakeBoardPkg'
         self.SILICON_PKG_NAME     = 'ElkhartlakePkg'
 
+
+#        self.ENABLE_PCI_ENUM      = 0
         self.PCI_EXPRESS_BASE     = 0xC0000000
         self.PCI_IO_BASE          = 0x00002000
         self.PCI_MEM32_BASE       = 0x80000000
@@ -208,7 +210,7 @@ class Board(BaseBoard):
         # for test purpose. Based on the platform id, relevant data is populated for each platform.
         self._generated_cfg_file_prefix = 'Autogen_'
         self._CFGDATA_INT_FILE = []
-        self._CFGDATA_EXT_FILE = [self._generated_cfg_file_prefix + 'CfgData_Int_IotgRvp1.dlt', self._generated_cfg_file_prefix + 'CfgData_Ext_IotgCrb.dlt', self._generated_cfg_file_prefix + 'CfgData_Ext_Up6000.dlt']
+        self._CFGDATA_EXT_FILE = [self._generated_cfg_file_prefix + 'CfgData_Int_IotgRvp1.dlt', self._generated_cfg_file_prefix + 'CfgData_Ext_IotgCrb.dlt', self._generated_cfg_file_prefix + 'CfgData_Ext_Up6000.dlt', self._generated_cfg_file_prefix + 'CfgData_Ext_Up2v2.dlt']
 
     def PlatformBuildHook (self, build, phase):
         if phase == 'pre-build:before':

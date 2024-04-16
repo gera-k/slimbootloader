@@ -18,7 +18,7 @@
 #include "PciAri.h"
 #include "PciIov.h"
 
-#define  DEBUG_PCI_ENUM    0
+#define  DEBUG_PCI_ENUM    1
 
 UINT8   *mPoolPtr;
 

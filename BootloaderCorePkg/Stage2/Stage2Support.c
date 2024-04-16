@@ -56,7 +56,9 @@ BoardNotifyPhase (
     if ((FspPhaseMask & mFspPhaseMask) == 0) {
       // Only call FSP notify once
       Status = CallFspNotifyPhase (FspPhase);
+#ifdef TODO_FIX_REBOOT_LOOP  // FSP wants to reboot - something wrong in PCI enum
       FspResetHandler (Status);
+#endif
       ASSERT_EFI_ERROR (Status);
 
       mFspPhaseMask |= FspPhaseMask;

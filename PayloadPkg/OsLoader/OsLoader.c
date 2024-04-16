@@ -683,8 +683,10 @@ BeforeOSJump (
 
   PlatformService = (PLATFORM_SERVICE *) GetServiceBySignature (PLATFORM_SERVICE_SIGNATURE);
   if ((PlatformService != NULL) && (PlatformService->NotifyPhase != NULL)) {
+#ifdef TODO_FIX_REBOOT_LOOP
     PlatformService->NotifyPhase (ReadyToBoot);
     PlatformService->NotifyPhase (EndOfFirmware);
+#endif
   }
   AddMeasurePoint (0x4100);
 
