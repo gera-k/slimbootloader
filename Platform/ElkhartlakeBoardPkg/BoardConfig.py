@@ -36,10 +36,13 @@ class Board(BaseBoard):
         self.SILICON_PKG_NAME     = 'ElkhartlakePkg'
 
 
-#        self.ENABLE_PCI_ENUM      = 0
         self.PCI_EXPRESS_BASE     = 0xC0000000
         self.PCI_IO_BASE          = 0x00002000
         self.PCI_MEM32_BASE       = 0x80000000
+        self._PCI_ENUM_DOWNGRADE_MEM64  = 1
+        self._PCI_ENUM_DOWNGRADE_PMEM64 = 0
+        self._PCI_ENUM_DOWNGRADE_BUS0   = 0
+        self.PCI_MEM64_BASE       = 0x800000000
         self.ACPI_PM_TIMER_BASE   = 0x1808
         self.ACPI_PROCESSOR_ID_BASE = 0
 

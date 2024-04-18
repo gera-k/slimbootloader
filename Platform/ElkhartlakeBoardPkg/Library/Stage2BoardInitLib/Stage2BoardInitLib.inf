@@ -105,3 +105,4 @@
   gPlatformModuleTokenSpaceGuid.PcdAcpiTableTemplatePtr
   gPlatformModuleTokenSpaceGuid.PcdFspsUpdPtr
   gPlatformCommonLibTokenSpaceGuid.PcdFspNoEop
+  gPlatformModuleTokenSpaceGuid.PcdPciResourceMem64Base
